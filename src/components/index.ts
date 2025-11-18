@@ -1,0 +1,7 @@
+export * from "./AboutProject"
+export * from "./Benefits"
+export * from "./ContactForm"
+export * from "./Footer"
+export * from "./HeroSection"
+export * from "./HowItWorks"
+export * from "./KeyFeatures"

@@ -1,0 +1,120 @@
+.howitworks-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(to bottom, #f8fdf9 0%, #ffffff 100%);
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+  position: relative;
+}
+
+.step-item {
+  position: relative;
+  text-align: center;
+  padding: 2rem;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: #00C853;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.step-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, rgba(0, 200, 83, 0.1), rgba(0, 230, 118, 0.1));
+  border: 2px solid rgba(0, 200, 83, 0.2);
+  border-radius: 16px;
+  color: #00C853;
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.step-item:hover .step-icon {
+  background: linear-gradient(135deg, rgba(0, 200, 83, 0.2), rgba(0, 230, 118, 0.2));
+  transform: scale(1.1) rotate(5deg);
+}
+
+.step-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #0D3B1F;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.step-description {
+  font-size: 0.9375rem;
+  color: #5A6C57;
+  line-height: 1.7;
+}
+
+.step-connector {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .steps-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .step-connector {
+    display: block;
+    position: absolute;
+    top: 28px;
+    right: -2rem;
+    width: 4rem;
+    height: 2px;
+    z-index: 1;
+  }
+  
+  .connector-line {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #00C853 0%, rgba(0, 200, 83, 0.3) 100%);
+    position: relative;
+  }
+  
+  .connector-line::after {
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: #00C853;
+    border-radius: 50%;
+  }
+  
+  .step-item:last-child .step-connector {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .howitworks-section {
+    padding: 4rem 1.5rem;
+  }
+  
+  .steps-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
