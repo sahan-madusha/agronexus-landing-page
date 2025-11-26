@@ -1,20 +1,6 @@
 {
-  "name": "taprodev-website",
+  "name": "agronexus-website",
   "version": "1.0.0",
-  "description": "Taprodev - Leading Software Engineering Company in Sri Lanka",
-  "keywords": [
-    "software engineering Sri Lanka",
-    "web development Sri Lanka",
-    "mobile app development",
-    "custom software development",
-    "IT services Sri Lanka"
-  ],
-  "author": "Taprodev (PVT) LTD",
-  "homepage": "https://www.taprodev.com",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/taprodev/website"
-  },
   "private": true,
   "type": "module",
   "scripts": {

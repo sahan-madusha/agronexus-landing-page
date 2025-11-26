@@ -1,29 +1,31 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import '../styles/contact.css'
-import { Mail, Phone, MessageCircle, Send } from 'lucide-react'
+import { useState } from "react";
+import "../styles/contact.css";
+import { Mail, Phone, MessageCircle, Send } from "lucide-react";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    message: ''
-  })
+    fullName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log('Form submitted:', formData)
+    e.preventDefault();
+    console.log("Form submitted:", formData);
     // Handle form submission
-  }
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
+      [e.target.name]: e.target.value,
+    });
+  };
 
   return (
     <section className="contact-section">
@@ -31,53 +33,66 @@ export default function ContactForm() {
         <div className="contact-wrapper">
           <div className="contact-info">
             <div className="section-badge">Get in Touch</div>
-            
-            <h2 className="section-title-left">
-              Request a Demo or Learn More
-            </h2>
-            
+
+            <h2 className="section-title-left">Request a Demo or Learn More</h2>
+
             <p className="contact-intro">
-              Interested in implementing smart greenhouse technology? Contact us to schedule
-              a demonstration or discuss how this innovation can benefit your agricultural
-              operations.
+              Interested in implementing smart greenhouse technology? Contact us
+              to schedule a demonstration or discuss how this innovation can
+              benefit your agricultural operations.
             </p>
-            
+
             <div className="contact-methods">
+              {/* Email */}
               <div className="contact-method">
                 <div className="method-icon">
                   <Mail size={24} />
                 </div>
                 <div className="method-content">
                   <div className="method-label">Email</div>
-                  <div className="method-value">smartgreenhouse@university.lk</div>
-                  <div className="method-value">research@agritech.lk</div>
+
+                  <a
+                    href="mailto:smartgreenhouse@agronexus.site"
+                    className="method-value link"
+                  >
+                    smartgreenhouse@agronexus.site
+                  </a>
                 </div>
               </div>
-              
+
+              {/* Phone */}
               <div className="contact-method">
                 <div className="method-icon">
                   <Phone size={24} />
                 </div>
                 <div className="method-content">
                   <div className="method-label">Phone</div>
-                  <div className="method-value">+94 11 234 5678</div>
-                  <div className="method-value">+94 77 123 4567</div>
+                  <a href="tel:+94771234567" className="method-value link">
+                    +94 77 123 4567
+                  </a>
                 </div>
               </div>
-              
+
+              {/* WhatsApp */}
               <div className="contact-method">
                 <div className="method-icon">
                   <MessageCircle size={24} />
                 </div>
                 <div className="method-content">
                   <div className="method-label">WhatsApp</div>
-                  <div className="method-value">+94 77 123 4567</div>
-                  <a href="#" className="whatsapp-link">Start Chat →</a>
+
+                  <a
+                    href="https://wa.me/94771234567"
+                    className="method-value link"
+                    target="_blank"
+                  >
+                    +94 77 123 4567
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <div className="contact-form-wrapper">
             <form onSubmit={handleSubmit} className="contact-form">
               <div className="form-row">
@@ -93,7 +108,7 @@ export default function ContactForm() {
                     required
                   />
                 </div>
-                
+
                 <div className="form-group">
                   <label htmlFor="email">Email Address *</label>
                   <input
@@ -107,7 +122,7 @@ export default function ContactForm() {
                   />
                 </div>
               </div>
-              
+
               <div className="form-group">
                 <label htmlFor="phone">Phone Number</label>
                 <input
@@ -119,7 +134,7 @@ export default function ContactForm() {
                   onChange={handleChange}
                 />
               </div>
-              
+
               <div className="form-group">
                 <label htmlFor="message">Message *</label>
                 <textarea
@@ -132,7 +147,7 @@ export default function ContactForm() {
                   required
                 ></textarea>
               </div>
-              
+
               <button type="submit" className="submit-btn">
                 Send Message
                 <Send size={20} />
@@ -142,5 +157,5 @@ export default function ContactForm() {
         </div>
       </div>
     </section>
-  )
+  );
 }
