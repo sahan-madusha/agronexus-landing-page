@@ -1,21 +1,21 @@
-import HeroSection from '@/components/HeroSection'
-import KeyFeatures from '@/components/KeyFeatures'
-import AboutProject from '@/components/AboutProject'
-import HowItWorks from '@/components/HowItWorks'
-import Benefits from '@/components/Benefits'
-import ContactForm from '@/components/ContactForm'
-import Footer from '@/components/Footer'
+// import HeroSection from '@/components/HeroSection'
+// import KeyFeatures from '@/components/KeyFeatures'
+// import AboutProject from '@/components/AboutProject'
+// import HowItWorks from '@/components/HowItWorks'
+// import Benefits from '@/components/Benefits'
+// import ContactForm from '@/components/ContactForm'
+// import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <HeroSection />
+      {/* <HeroSection />
       <KeyFeatures />
       <HowItWorks />
       <Benefits />
       <AboutProject />
       <ContactForm />
-      <Footer />
+      <Footer /> */}
     </main>
   )
 }
