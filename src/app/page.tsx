@@ -1,4 +1,4 @@
-import HeroSection from "@/components/HeroSection";
+import HeroSection from "../components/HeroSection";
 // import KeyFeatures from '@/components/KeyFeatures'
 // import AboutProject from '@/components/AboutProject'
 // import HowItWorks from '@/components/HowItWorks'
