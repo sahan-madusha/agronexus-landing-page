@@ -36,5 +36,5 @@ jobs:
             npm install
             npm run build
 
-            pm2 restart agronexus || pm2 start "npm start" --name agronexus
+          pm2 restart agronexus || pm2 start "NODE_OPTIONS='--max-old-space-size=512' npm start" --name agronexus
           EOF
