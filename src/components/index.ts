@@ -1,3 +1,3 @@
-export * from "./aboutProject"
-export * from "./heroSection"
-export * from "./keyFeatures"
+export * from "./AboutProject"
+export * from "./HeroSection"
+export * from "./KeyFeatures"
