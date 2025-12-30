@@ -1,4 +1,4 @@
-import Benefits from "@/components/Benefits";
+import Benefits from "@/components/benefits";
 
 export default function BenefitsPage() {
     return (

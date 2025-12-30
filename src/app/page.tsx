@@ -1,10 +1,10 @@
-import HeroSection from '@/components/HeroSection'
-import KeyFeatures from '@/components/KeyFeatures'
-import HowItWorks from '@/components/HowItWorks'
-import Benefits from '@/components/Benefits'
-import AboutProject from '@/components/AboutProject'
-import ContactForm from '@/components/ContactForm'
-import Footer from '@/components/Footer'
+import HeroSection from '@/components/heroSection'
+import KeyFeatures from '@/components/keyFeatures'
+import AboutProject from '@/components/aboutProject'
+import HowItWorks from '@/components/howItWorks'
+import Benefits from '@/components/benefits'
+import ContactForm from '@/components/contactForm'
+import Footer from '@/components/footer'
 
 export default function Home() {
   return (

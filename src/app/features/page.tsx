@@ -1,4 +1,4 @@
-import KeyFeatures from "@/components/KeyFeatures";
+import KeyFeatures from "@/components/keyFeatures";
 
 export default function FeaturesPage() {
     return (
