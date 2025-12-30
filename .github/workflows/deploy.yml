@@ -1,4 +1,4 @@
-name: Deploy Next.js to EC2
+name: Deploy Agronexus Landing Page
 
 on:
   push:
@@ -12,9 +12,9 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Set up SSH
+      - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/id_ed25519
@@ -24,13 +24,17 @@ jobs:
       - name: Deploy to EC2
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
+            set -e
+
             cd ${{ secrets.EC2_PATH }}
+
             export NODE_ENV=production
-            export PNPM_HOME="$HOME/.local/share/pnpm"
-            export PATH="$PNPM_HOME:$PATH"
-            source ~/.bashrc
+            export NVM_DIR="$HOME/.nvm"
+            source "$NVM_DIR/nvm.sh"
+
             git pull origin main
-            pnpm install
-            pnpm build
-            pm2 restart next-app || pm2 start "pnpm start" --name next-app
+            npm install
+            npm run build
+
+            pm2 restart agronexus || pm2 start "npm start" --name agronexus
           EOF
